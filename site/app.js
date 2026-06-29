@@ -1,9 +1,11 @@
-const state = { items: [], category: "全部", query: "" };
+const state = { items: [], category: "全部", sourceType: "全部", query: "" };
 const categories = ["全部", "设计工具", "产品与体验", "图像与视频", "工作流与 Agent", "行业观察"];
+const sourceTypes = ["全部", "网站", "X", "公众号"];
 
 const elements = {
   grid: document.querySelector("#news-grid"),
   filters: document.querySelector("#filters"),
+  sourceFilters: document.querySelector("#source-filters"),
   search: document.querySelector("#search-input"),
   empty: document.querySelector("#empty-state"),
   clear: document.querySelector("#clear-filters"),
@@ -35,31 +37,47 @@ function filteredItems() {
   const query = state.query.trim().toLowerCase();
   return state.items.filter((item) => {
     const categoryMatch = state.category === "全部" || item.designCategory === state.category;
-    const haystack = `${item.title} ${item.summary ?? ""} ${item.source ?? ""} ${(item.tags ?? []).join(" ")}`.toLowerCase();
-    return categoryMatch && (!query || haystack.includes(query));
+    const sourceMatch = state.sourceType === "全部" || item.sourceType === state.sourceType;
+    const haystack = `${item.title} ${item.summary ?? ""} ${item.source ?? ""} ${item.sourceType ?? ""} ${(item.tags ?? []).join(" ")}`.toLowerCase();
+    return categoryMatch && sourceMatch && (!query || haystack.includes(query));
   });
+}
+
+function createFilterButton(label, count, active, onClick) {
+  const button = document.createElement("button");
+  button.type = "button";
+  button.className = active ? "active" : "";
+  button.innerHTML = `<span>${label}</span><small>${String(count).padStart(2, "0")}</small>`;
+  button.addEventListener("click", onClick);
+  return button;
 }
 
 function renderFilters() {
   elements.filters.replaceChildren(...categories.map((category) => {
-    const button = document.createElement("button");
     const count = category === "全部" ? state.items.length : state.items.filter((item) => item.designCategory === category).length;
-    button.type = "button";
-    button.className = category === state.category ? "active" : "";
-    button.innerHTML = `<span>${category}</span><small>${String(count).padStart(2, "0")}</small>`;
-    button.addEventListener("click", () => {
+    return createFilterButton(category, count, category === state.category, () => {
       state.category = category;
       renderFilters();
       renderNews();
     });
-    return button;
+  }));
+}
+
+function renderSourceFilters() {
+  elements.sourceFilters.replaceChildren(...sourceTypes.map((sourceType) => {
+    const count = sourceType === "全部" ? state.items.length : state.items.filter((item) => item.sourceType === sourceType).length;
+    return createFilterButton(sourceType, count, sourceType === state.sourceType, () => {
+      state.sourceType = sourceType;
+      renderSourceFilters();
+      renderNews();
+    });
   }));
 }
 
 function createCard(item, index) {
   const card = elements.template.content.firstElementChild.cloneNode(true);
   card.style.setProperty("--delay", `${Math.min(index, 10) * 45}ms`);
-  card.querySelector(".card-category").textContent = item.designCategory;
+  card.querySelector(".card-category").textContent = `${item.designCategory} · ${item.sourceType || "网站"}`;
   card.querySelector("time").textContent = relativeTime(item.publishedAt);
   card.querySelector("h3").textContent = item.title;
   card.querySelector(".card-summary").textContent = item.summary || "暂无摘要，请查看原文。";
@@ -99,6 +117,7 @@ async function init() {
     const spotlight = state.items.find((item) => item.designCategory === "设计工具") || state.items[0];
     renderSpotlight(spotlight);
     renderFilters();
+    renderSourceFilters();
     renderNews();
   } catch (error) {
     document.querySelector("#spotlight-title").textContent = "情报暂时离线";
@@ -114,9 +133,11 @@ elements.search.addEventListener("input", (event) => {
 
 elements.clear.addEventListener("click", () => {
   state.category = "全部";
+  state.sourceType = "全部";
   state.query = "";
   elements.search.value = "";
   renderFilters();
+  renderSourceFilters();
   renderNews();
 });
 

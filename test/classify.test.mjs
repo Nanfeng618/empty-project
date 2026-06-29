@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { classifyItem, selectDesignNews } from "../scripts/classify.mjs";
+import { applySourceLimits, classifyItem, detectSourceType, selectDesignNews } from "../scripts/classify.mjs";
 
 test("classifies Figma news as design tools", () => {
   const result = classifyItem({ title: "Figma 发布 AI 原型与设计系统新功能", score: 90 });
@@ -40,4 +40,26 @@ test("treats generic agent news as too weak for the design feed", () => {
     { id: "agent", title: "A new autonomous agent framework", url: "https://example.com/agent", score: 90 }
   ], 6);
   assert.equal(items.length, 0);
+});
+
+test("detects website, X, and WeChat source types", () => {
+  assert.equal(detectSourceType("https://x.com/example/status/1"), "X");
+  assert.equal(detectSourceType("https://twitter.com/example/status/1"), "X");
+  assert.equal(detectSourceType("https://mp.weixin.qq.com/s/example"), "公众号");
+  assert.equal(detectSourceType("https://example.com/article"), "网站");
+  assert.equal(detectSourceType("not a url"), "网站");
+});
+
+test("limits noisy source types without removing other sources", () => {
+  const items = [
+    { id: "x1", sourceType: "X" },
+    { id: "x2", sourceType: "X" },
+    { id: "x3", sourceType: "X" },
+    { id: "web", sourceType: "网站" },
+    { id: "mp", sourceType: "公众号" }
+  ];
+  assert.deepEqual(
+    applySourceLimits(items, { X: 2, 网站: 1, 公众号: 1 }).map((item) => item.id),
+    ["x1", "x2", "web", "mp"]
+  );
 });
