@@ -1,0 +1,11 @@
+{
+  "name": "design-ai-radar",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "update": "node scripts/fetch-news.mjs",
+    "serve": "node scripts/serve.mjs",
+    "test": "node --test"
+  }
+}

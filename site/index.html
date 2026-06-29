@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="为产品与视觉设计师筛选的 AI 热点情报。" />
+    <title>设计 AI 雷达</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="设计 AI 雷达首页">
+        <span class="brand-mark">D/A</span>
+        <span>设计 AI 雷达</span>
+      </a>
+      <p class="edition" id="edition">第 001 期</p>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="live-dot"></span> DESIGN INTELLIGENCE</p>
+          <h1>别追所有热点。<br /><em>只看改变设计的。</em></h1>
+          <p class="hero-intro">从 AI 动态中筛出与产品体验、视觉生产和设计工作流真正相关的内容。</p>
+        </div>
+        <div class="hero-meta">
+          <div><strong id="story-count">--</strong><span>本期条目</span></div>
+          <div><strong>7D</strong><span>观察窗口</span></div>
+          <div><strong id="update-time">--</strong><span>最近更新</span></div>
+        </div>
+      </section>
+
+      <section class="spotlight" id="spotlight" aria-labelledby="spotlight-title">
+        <p class="section-index">01 / 今日焦点</p>
+        <div class="spotlight-content">
+          <div>
+            <p class="card-kicker" id="spotlight-category">正在获取</p>
+            <h2 id="spotlight-title">正在载入最新设计 AI 情报</h2>
+            <p id="spotlight-summary">请稍候。</p>
+          </div>
+          <a id="spotlight-link" class="read-link" href="#news">查看全部 <span>↗</span></a>
+        </div>
+      </section>
+
+      <section class="feed" id="news" aria-labelledby="feed-title">
+        <div class="feed-heading">
+          <div>
+            <p class="section-index">02 / 情报流</p>
+            <h2 id="feed-title">值得设计师花时间的动态</h2>
+          </div>
+          <label class="search">
+            <span>搜索</span>
+            <input id="search-input" type="search" placeholder="工具、主题或来源" autocomplete="off" />
+          </label>
+        </div>
+        <nav class="filters" id="filters" aria-label="资讯分类"></nav>
+        <div class="news-grid" id="news-grid" aria-live="polite"></div>
+        <div class="empty-state" id="empty-state" hidden>
+          <p>没有匹配的条目。</p>
+          <button id="clear-filters" type="button">清除筛选</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>为设计决策保留注意力。</p>
+      <p>数据来自 <a href="https://aihot.virxact.com" target="_blank" rel="noreferrer">AI HOT</a>，摘要仅供快速判断，请以原文为准。</p>
+    </footer>
+
+    <template id="news-card-template">
+      <article class="news-card">
+        <div class="card-topline">
+          <span class="card-category"></span>
+          <time></time>
+        </div>
+        <h3></h3>
+        <p class="card-summary"></p>
+        <p class="why"></p>
+        <div class="card-footer">
+          <span class="source"></span>
+          <a target="_blank" rel="noreferrer" aria-label="阅读原文">↗</a>
+        </div>
+      </article>
+    </template>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
