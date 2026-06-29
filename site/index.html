@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#f1f0e7" />
-    <meta name="description" content="为产品与视觉设计师筛选的 AI 热点情报。" />
+    <meta name="description" content="从网站、公众号和 X 中为产品与视觉设计师筛选的 AI 热点情报。" />
     <title>设计 AI 雷达</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,7 +26,7 @@
         <div class="hero-copy">
           <p class="eyebrow"><span class="live-dot"></span> DESIGN INTELLIGENCE</p>
           <h1>别追所有热点。<br /><em>只看改变设计的。</em></h1>
-          <p class="hero-intro">从 AI 动态中筛出与产品体验、视觉生产和设计工作流真正相关的内容。</p>
+          <p class="hero-intro">从网站、公众号和 X 中，筛出与产品体验、视觉生产和设计工作流真正相关的内容。</p>
         </div>
         <div class="hero-meta">
           <div><strong id="story-count">--</strong><span>本期条目</span></div>
@@ -58,7 +58,16 @@
             <input id="search-input" type="search" placeholder="工具、主题或来源" autocomplete="off" />
           </label>
         </div>
-        <nav class="filters" id="filters" aria-label="资讯分类"></nav>
+        <div class="filter-groups">
+          <div class="filter-row">
+            <span class="filter-label">主题</span>
+            <nav class="filters" id="filters" aria-label="资讯主题"></nav>
+          </div>
+          <div class="filter-row">
+            <span class="filter-label">来源</span>
+            <nav class="filters source-filters" id="source-filters" aria-label="资讯来源"></nav>
+          </div>
+        </div>
         <div class="news-grid" id="news-grid" aria-live="polite"></div>
         <div class="empty-state" id="empty-state" hidden>
           <p>没有匹配的条目。</p>

@@ -60,6 +60,25 @@ const CATEGORY_PRIORITY = {
   "行业观察": 0
 };
 
+export const SOURCE_LIMITS = {
+  "网站": 36,
+  "X": 24,
+  "公众号": 12
+};
+
+export function detectSourceType(url) {
+  try {
+    const hostname = new URL(url).hostname.toLowerCase();
+    if (hostname === "x.com" || hostname.endsWith(".x.com") || hostname === "twitter.com" || hostname.endsWith(".twitter.com")) {
+      return "X";
+    }
+    if (hostname === "mp.weixin.qq.com") return "公众号";
+  } catch {
+    // Unknown and relative URLs stay in the generic website bucket.
+  }
+  return "网站";
+}
+
 function containsKeyword(text, keyword) {
   const normalized = keyword.toLowerCase();
   if (!/^[a-z0-9 /.-]+$/.test(normalized)) return text.includes(normalized);
@@ -90,6 +109,7 @@ export function classifyItem(item) {
 
   return {
     ...item,
+    sourceType: detectSourceType(item.url),
     designCategory: category,
     relevanceScore,
     editorialScore: relevanceScore + CATEGORY_PRIORITY[category],
@@ -115,6 +135,18 @@ export function selectDesignNews(items, minimumScore = 5) {
       if (relevance !== 0) return relevance;
       return new Date(b.publishedAt || 0) - new Date(a.publishedAt || 0);
     });
+}
+
+export function applySourceLimits(items, limits = SOURCE_LIMITS) {
+  const counts = new Map();
+  return items.filter((item) => {
+    const sourceType = item.sourceType ?? detectSourceType(item.url);
+    const count = counts.get(sourceType) ?? 0;
+    const limit = limits[sourceType] ?? Number.POSITIVE_INFINITY;
+    if (count >= limit) return false;
+    counts.set(sourceType, count + 1);
+    return true;
+  });
 }
 
 export const DESIGN_CATEGORIES = RULES.map((rule) => rule.category);

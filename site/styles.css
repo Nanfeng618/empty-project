@@ -84,10 +84,15 @@ button, input { font: inherit; }
 .search input { flex: 1; min-width: 0; border: 0; outline: 0; background: transparent; color: var(--ink); }
 .search input::placeholder { color: #8b9387; }
 
-.filters { display: flex; overflow-x: auto; gap: 8px; margin: 48px 0 30px; scrollbar-width: none; }
+.filter-groups { display: grid; gap: 12px; margin: 48px 0 30px; }
+.filter-row { display: flex; align-items: center; gap: 14px; min-width: 0; }
+.filter-label { flex: 0 0 34px; color: var(--muted); font-size: 11px; font-weight: 700; letter-spacing: 0.08em; }
+.filters { display: flex; min-width: 0; overflow-x: auto; gap: 8px; margin: 0; scrollbar-width: none; }
 .filters button { display: flex; gap: 14px; align-items: baseline; border: 1px solid var(--line); border-radius: 99px; padding: 10px 16px; background: transparent; color: var(--muted); cursor: pointer; white-space: nowrap; }
 .filters button:hover, .filters button.active { background: var(--ink); border-color: var(--ink); color: var(--paper); }
 .filters small { color: var(--orange); font-size: 10px; }
+.source-filters button.active { background: var(--orange); border-color: var(--orange); }
+.source-filters button.active small { color: var(--paper); }
 
 .news-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--ink); border-left: 1px solid var(--line); }
 .news-card { min-height: 430px; display: flex; flex-direction: column; padding: 28px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); animation: rise 520ms both; animation-delay: var(--delay); transition: background 180ms ease, transform 180ms ease; }
