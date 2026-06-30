@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-29T16:11:39.280Z",
-  "previousGeneratedAt": "2026-06-29T10:30:03.690Z",
+  "generatedAt": "2026-06-30T04:34:25.331Z",
+  "previousGeneratedAt": "2026-06-29T16:11:39.280Z",
   "sourceWindowDays": 7,
-  "sourceCount": 111,
-  "itemCount": 39,
+  "sourceCount": 113,
+  "itemCount": 38,
   "source": {
     "name": "AI HOT",
     "url": "https://aihot.virxact.com"
@@ -164,27 +164,6 @@
       "whyItMatters": "可用于视觉探索、素材生产或动态内容"
     },
     {
-      "id": "cmqrzsyiz0poxslp5pyonhkdy",
-      "title": "OpenRouter推出统一图像API",
-      "title_en": "Introducing the Unified Image API",
-      "url": "https://openrouter.ai/blog/announcements/image-api",
-      "permalink": "https://aihot.virxact.com/items/cmqrzsyiz0poxslp5pyonhkdy",
-      "source": "OpenRouter：Announcements（RSS）",
-      "publishedAt": "2026-06-23T00:00:00.000Z",
-      "summary": "OpenRouter推出统一图像API，整合Google、OpenAI、Black Forest Labs、Recraft、ByteDance、Sourceful、Microsoft、xAI等30+模型。新API提供标准化请求格式，通过`/api/v1/images/models`端点返回每个模型的分辨率、宽高比、输出数量、输入参考图数量、种子等能力描述；通过`/api/v1/images/models/{id}/endpoints`端点获取具体服务商的定价与参数支持（如Seedream 4.5每张$0.04、FLUX.2 Pro每百万像素$0.03、GPT-5.4 Image 2按token计费）。OpenAI的GPT 5系列图像模型支持SSE流式预览，启用`\"stream\"： true`即可边生成边返回预览。新图像模型将仅添加至专用API，建议现有用户切换。",
-      "category": "ai-products",
-      "score": 73,
-      "selected": true,
-      "designCategory": "图像与视频",
-      "relevanceScore": 10,
-      "editorialScore": 13,
-      "tags": [
-        "flux",
-        "图像"
-      ],
-      "whyItMatters": "可用于视觉探索、素材生产或动态内容"
-    },
-    {
       "id": "cmqs68cgx0090slfuumt36jny",
       "title": "字节跳动技术副总裁洪定坤：AI Coding 的实践与探索",
       "title_en": null,
@@ -272,6 +251,69 @@
         "agent"
       ],
       "whyItMatters": "可能改变需求分析、设计审查或自动化流程"
+    },
+    {
+      "id": "cmr03h5tq03jjslki3a281zet",
+      "title": "一个人管理5款产品，80%时间不写代码？Every的复利工程",
+      "title_en": "http：//x.com/i/article/2071795831028826112",
+      "url": "https://x.com/xiaohu/status/2071796715162857477",
+      "permalink": "https://aihot.virxact.com/items/cmr03h5tq03jjslki3a281zet",
+      "source": "X：小互 (@xiaohu)",
+      "publishedAt": "2026-06-30T03:23:23.000Z",
+      "summary": "媒体软件公司Every公开「复利工程」方法论，以单人工程团队维护5款产品。核心是四步循环：Plan→Work→Review→Compound，其中Compound将每次解决问题的解法写入CLAUDE.md和docs/solutions/，使AI下次自动避坑。工程师80%时间花在Plan和Review，仅20%用于写代码。配套开源插件支持Claude Code等，含26个专项agent、23条工作流命令、13项技能，可零配置使用。/workflows：review一次并发14个agent审查代码，/workflows：plan在ultrathink模式下可并发40多个研究agent。",
+      "category": "tip",
+      "score": 81,
+      "selected": true,
+      "designCategory": "工作流与 Agent",
+      "relevanceScore": 9,
+      "editorialScore": 10,
+      "tags": [
+        "工作流",
+        "claude code",
+        "agent"
+      ],
+      "whyItMatters": "可能改变需求分析、设计审查或自动化流程"
+    },
+    {
+      "id": "cmr00f9t902pgslkiofzqdgx2",
+      "title": "具身智能数据采集员：日薪200元起，给机器人当老师",
+      "title_en": "给机器人打工了一天，我们体验上了AI时代最魔幻的工作。",
+      "url": "https://mp.weixin.qq.com/s/aSd4kLu7xHllZatrd5EGsw",
+      "permalink": "https://aihot.virxact.com/items/cmr00f9t902pgslkiofzqdgx2",
+      "source": "公众号：数字生命卡兹克",
+      "publishedAt": "2026-06-30T01:58:00.000Z",
+      "summary": "具身智能数据采集员以日薪200-250元招兼职，无需学历经验。面试先测量身高体重以适配采集手套，并询问是否晕VR。工作分两种：遥操作采集--穿戴设备控制双臂机器人完成分拣积木、叠纸杯等动作；无机器人示教采集--徒手重复动作（如叠衣服），设备记录轨迹。全球高质量物理交互数据截至2026年初仅约50万小时，不足大语言模型训练数据的两万分之一，需大量人力从零采集。",
+      "category": "tip",
+      "score": 67,
+      "selected": true,
+      "designCategory": "产品与体验",
+      "relevanceScore": 6,
+      "editorialScore": 10,
+      "tags": [
+        "交互"
+      ],
+      "whyItMatters": "与产品体验、交互判断和界面设计相关"
+    },
+    {
+      "id": "cmqzzpqet02gpslki3d15k1l0",
+      "title": "AI News Radar 大更新：新增自媒体板块，支持订阅多平台账号",
+      "title_en": "大更新我的AI热点Skill，这次把国内外自媒体大神都包圆了",
+      "url": "https://mp.weixin.qq.com/s/iW5FVqbHtYi31mJ22Q_cog",
+      "permalink": "https://aihot.virxact.com/items/cmqzzpqet02gpslki3d15k1l0",
+      "source": "公众号：卡尔的AI沃茨",
+      "publishedAt": "2026-06-30T01:47:00.000Z",
+      "summary": "AI News Radar 迎来大更新，新增自媒体板块，支持订阅某书、某音、某站、某X等平台账号，每日按热度推荐 Top10 信息（无热门则不硬凑），同时保留时间轴视图，可在热度优先和时间优先间切换。官方来源包括 OpenAI、Anthropic、Google 等一手消息及 GitHub AI&ML 更新日志。信息流按来源、类型、信号等级分类，标注高优先级与多源认证。项目完全开源，可零 API 部署独立 AI 日报页面，支持手机移动端及暗色界面。",
+      "category": "ai-products",
+      "score": 70,
+      "selected": true,
+      "designCategory": "产品与体验",
+      "relevanceScore": 6,
+      "editorialScore": 10,
+      "tags": [
+        "界面",
+        "skill"
+      ],
+      "whyItMatters": "与产品体验、交互判断和界面设计相关"
     },
     {
       "id": "cmqzbkvm2008ysltjog7ffi8l",
@@ -506,28 +548,6 @@
       "whyItMatters": "可用于视觉探索、素材生产或动态内容"
     },
     {
-      "id": "cmqrjhuo40kszslp5qsjmxdy7",
-      "title": "Qwen-AgentWorld：面向通用智能体的语言世界模型",
-      "title_en": "Qwen-AgentWorld： Language World Models for General Agents",
-      "url": "https://qwen.ai/blog?id=qwen-agentworld",
-      "permalink": "https://aihot.virxact.com/items/cmqrjhuo40kszslp5qsjmxdy7",
-      "source": "Qwen：Blog Retrieval（API）",
-      "publishedAt": "2026-06-23T03:30:30.000Z",
-      "summary": "Qwen 团队发布 Qwen-AgentWorld，一个以环境建模为训练目标的原生语言世界模型，在单个模型中模拟 MCP、Search、Terminal、SWE 及 GUI 域（Web、OS、Android）共七个域。模型使用超 1000 万条真实交互轨迹训练，在 AgentWorldBench 上以 Qwen-AgentWorld-397B-A17B 版本达最高模拟质量，超越 GPT-5.4、Claude Opus 4.8 和 Gemini 3.1 Pro。同时发布评测基准 AgentWorldBench。该模型可作为解耦环境模拟器用于智能体 RL 训练，也可作为统一智能体基础模型，经 LWM 预热后无需智能体 RL 微调即可迁移。模型和基准已开源在 Hugging Face 和 ModelScope。",
-      "category": "ai-models",
-      "score": 81,
-      "selected": true,
-      "designCategory": "产品与体验",
-      "relevanceScore": 6,
-      "editorialScore": 10,
-      "tags": [
-        "交互",
-        "智能体",
-        "mcp"
-      ],
-      "whyItMatters": "与产品体验、交互判断和界面设计相关"
-    },
-    {
       "id": "cmqykzeht02shslivflwhgdbx",
       "title": "分享两个Vibe Coding必备的实用Prompt：第一性原理与对抗式审查",
       "title_en": "分享2个Vibe Coding必备的超实用Prompt。",
@@ -639,6 +659,29 @@
       "whyItMatters": "可能改变需求分析、设计审查或自动化流程"
     },
     {
+      "id": "cmr059nvo0402slkikkryczay",
+      "title": "OSWorld2.0：长时域真实世界计算机使用工作流基准",
+      "title_en": "OSWorld2.0： Benchmarking Computer Use Agents on Long-Horizon Real-World Tasks",
+      "url": "https://arxiv.org/abs/2606.29537",
+      "permalink": "https://aihot.virxact.com/items/cmr059nvo0402slkikkryczay",
+      "source": "HuggingFace Daily Papers（社区热门论文）",
+      "publishedAt": "2026-06-28T00:00:00.000Z",
+      "summary": "OSWorld2.0 发布，包含108个长时域计算机使用工作流，覆盖日常与专业任务。每项任务用户中位数约1.6小时完成，Claude Opus 4.7（最大思考）平均需318次工具调用（OSWorld 1.0约30次）。基准聚焦流交互、动态环境、跨源推理、隐式状态推断、视觉空间精度等真实挑战。任务基于真实输入工件和状态化用户档案，附安全报告。500步二元完成指标下，Claude Opus 4.8（最大思考+批量调用）得分最高仅20.6%（部分54.8%）；GPT-5.5更省token但约13%。结果表明当前智能体远未达专业级：瓶颈不在基本GUI控制或编码，而是丢失约束、错过中途信息、猜测而非询问、跳过验证，尤其依赖隐藏状态时最差。",
+      "category": "paper",
+      "score": 82,
+      "selected": true,
+      "designCategory": "工作流与 Agent",
+      "relevanceScore": 7,
+      "editorialScore": 8,
+      "tags": [
+        "视觉",
+        "交互",
+        "工作流",
+        "智能体"
+      ],
+      "whyItMatters": "可能改变需求分析、设计审查或自动化流程"
+    },
+    {
       "id": "cmqrxnmqg0p2zslp51p8cc1ln",
       "title": "火山引擎推出Agent Ready基础设施，AgentKit与ArkClaw企业版升级",
       "title_en": "火山引擎Agent Infra升级，让Agent真正进入企业工作流",
@@ -656,29 +699,6 @@
       "tags": [
         "工作流",
         "agent"
-      ],
-      "whyItMatters": "可能改变需求分析、设计审查或自动化流程"
-    },
-    {
-      "id": "cmqppo7c402qnslp5p92n6y3b",
-      "title": "Show HN：Oak--专为代理设计的 Git 替代方案",
-      "title_en": "Show HN： Oak--专为代理设计的 Git 替代方案",
-      "url": "https://oak.space/oak/oak",
-      "permalink": "https://aihot.virxact.com/items/cmqppo7c402qnslp5p92n6y3b",
-      "source": "Hacker News 热门（buzzing.cc 中文翻译）",
-      "publishedAt": "2026-06-22T21:00:09.808Z",
-      "summary": "Oak 是开源版本控制系统，专为 AI 智能体（Claude Code、Codex、Cursor）设计。采用 BLAKE3 内容哈希、内容定义分块、diff/merge 及 Blob/Manifest/Commit/Tree 数据模型，可选 SQLite 和 git 后端。以分支-会话为基本工作单元，用分支描述替代逐次提交，通过内容寻址懒加载使智能体数秒内编辑任意仓库。速度远超 git。已发布公开测试版 v0.99.0，支持 macOS（Apple Silicon）、Linux（x86_64）及 Windows，可通过 curl 或 cargo 安装，Apache-2.0 开源。",
-      "category": "ai-products",
-      "score": 72,
-      "selected": true,
-      "designCategory": "工作流与 Agent",
-      "relevanceScore": 7,
-      "editorialScore": 8,
-      "tags": [
-        "设计",
-        "codex",
-        "claude code",
-        "智能体"
       ],
       "whyItMatters": "可能改变需求分析、设计审查或自动化流程"
     },
@@ -768,45 +788,24 @@
       "whyItMatters": "可能改变需求分析、设计审查或自动化流程"
     },
     {
-      "id": "cmqrjiayk0kt7slp5tfl88svb",
-      "title": "NatureBench：AI编码智能体能否匹配Nature系列论文已发表SOTA？",
-      "title_en": "NatureBench： Can Coding Agents Match the Published SOTA of Nature-Family Papers？",
-      "url": "https://arxiv.org/abs/2606.24530",
-      "permalink": "https://aihot.virxact.com/items/cmqrjiayk0kt7slp5tfl88svb",
-      "source": "HuggingFace Daily Papers（社区热门论文）",
-      "publishedAt": "2026-06-23T00:00:00.000Z",
-      "summary": "NatureBench是一个跨学科基准测试，包含90个从Nature系列同行评审论文中提取的任务，用于评估AI编码智能体能否超越复现、实现发现。基准基于NatureGym自动化管线，为每个任务提供标准化容器化环境，解决环境碎片化问题。在严格禁用网络搜索的协议下评估10种前沿智能体配置，最强模型仅在17.8%任务上超过已发表SOTA（g>0.1准则）。分析表明，智能体成功主要依赖方法论翻译，失败主因为方法选择错误和计算预算不足。已发布基准、NatureGym管线及公共排行榜。",
-      "category": "ai-products",
-      "score": 70,
-      "selected": true,
-      "designCategory": "工作流与 Agent",
-      "relevanceScore": 6,
-      "editorialScore": 7,
-      "tags": [
-        "自动化",
-        "智能体"
-      ],
-      "whyItMatters": "可能改变需求分析、设计审查或自动化流程"
-    },
-    {
-      "id": "cmqqd9e3008seslp5644lhzaa",
-      "title": "huggingface_hub 实现每周发布：AI、开源工具、人工审核闭环",
-      "title_en": "Shipping huggingface_hub every week with AI， open tools， and a human in the loop",
-      "url": "https://huggingface.co/blog/huggingface-hub-release-ci",
-      "permalink": "https://aihot.virxact.com/items/cmqqd9e3008seslp5644lhzaa",
-      "source": "Hugging Face：Blog（RSS）",
-      "publishedAt": "2026-06-23T00:00:00.000Z",
-      "summary": "Hugging Face 将 huggingface_hub 的发布周期从每 4-6 周缩短至每周，全部由单个 GitHub Actions 工作流自动完成。流程依赖开源工具和开权重模型（当前为 Z.ai 的 GLM-5.2）来起草发布说明和 Slack 公告，但保留人类在最终审核环节的决定权。自动步骤包括版本号更新、提交标签推送、PyPI 发布、下游测试分支创建、发布说明草稿、Slack 公告草稿、归档、后置版本提升以及对合入 PR 的评论。所有组件均基于开源生态构建，任何维护者都可直接复制使用。",
+      "id": "cmqzk693n002zslksfkrr5w2w",
+      "title": "Qwen 3.6 27B 是本地开发的理想选择",
+      "title_en": null,
+      "url": "https://quesma.com/blog/qwen-36-is-awesome",
+      "permalink": "https://aihot.virxact.com/items/cmqzk693n002zslksfkrr5w2w",
+      "source": "Hacker News 热门（buzzing.cc 中文翻译）",
+      "publishedAt": "2026-06-29T18:03:02.582Z",
+      "summary": "Qwen 3.6 27B 是一款密集参数本地大语言模型，原生支持 256k 上下文。在 Macbook Max M5 上运行 llama.cpp Q8_0 量化版（含多 token 预测）可达 30 tokens/s；用户反馈在 RTX 5090 上 Q6_K 量化可达 50 tokens/s。它可通过单个提示完成创意诗歌、用 pnpm 生成六边形扫雷游戏等任务，作者称其为首个真正具备通用智能的本地模型。另有一个 MoE 变体 35B A3B，但作者推荐 27B 版本。",
       "category": "tip",
-      "score": 67,
+      "score": 75,
       "selected": true,
-      "designCategory": "工作流与 Agent",
+      "designCategory": "行业观察",
       "relevanceScore": 6,
-      "editorialScore": 7,
+      "editorialScore": 6,
       "tags": [
-        "工作流"
+        "创意"
       ],
-      "whyItMatters": "可能改变需求分析、设计审查或自动化流程"
+      "whyItMatters": "值得关注其对设计业务与创意行业的影响"
     },
     {
       "id": "cmqvtzehe0g65sl800jrc1x17",
@@ -825,26 +824,6 @@
       "editorialScore": 6,
       "tags": [
         "广告"
-      ],
-      "whyItMatters": "值得关注其对设计业务与创意行业的影响"
-    },
-    {
-      "id": "cmqpl4smd01j1slp5npj3krmn",
-      "title": "Google DeepMind 7500 万美元投资 A24，合作开发电影 AI 工具",
-      "title_en": "Google DeepMind bets $75M on AI's future in Hollywood with A24 deal",
-      "url": "https://techcrunch.com/2026/06/22/google-deepmind-bets-75m-on-ais-future-in-hollywood-with-a24-deal",
-      "permalink": "https://aihot.virxact.com/items/cmqpl4smd01j1slp5npj3krmn",
-      "source": "TechCrunch：AI（RSS）",
-      "publishedAt": "2026-06-22T18:49:44.000Z",
-      "summary": "Google DeepMind 宣布向独立电影制片厂 A24 投资 7500 万美元（据《华尔街日报》），双方将合作开发电影制作 AI 工具。A24 出品过《万事俱备》《后室》等影片。Google DeepMind CEO Demis Hassabis 称，希望通过与艺术家直接合作，打造支持创意表达的 AI 功能。此举是好莱坞最新一次科技公司与电影 AI 联手，此前 Netflix 已收购 Ben Affleck 的 AI 工具公司 Interpositive，亚马逊 MGM 工作室也在去年设立了影视 AI 部门。",
-      "category": "industry",
-      "score": 70,
-      "selected": true,
-      "designCategory": "行业观察",
-      "relevanceScore": 6,
-      "editorialScore": 6,
-      "tags": [
-        "创意"
       ],
       "whyItMatters": "值得关注其对设计业务与创意行业的影响"
     }
