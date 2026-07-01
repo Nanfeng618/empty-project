@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-07-01T04:54:18.003Z",
-  "previousGeneratedAt": "2026-06-30T14:43:32.871Z",
+  "generatedAt": "2026-07-01T10:14:20.434Z",
+  "previousGeneratedAt": "2026-07-01T04:54:18.003Z",
   "sourceWindowDays": 7,
   "sourceCount": 114,
-  "itemCount": 38,
+  "itemCount": 37,
   "source": {
     "name": "AI HOT",
     "url": "https://aihot.virxact.com"
@@ -485,27 +485,6 @@
         "界面",
         "自动化",
         "mcp"
-      ],
-      "whyItMatters": "与产品体验、交互判断和界面设计相关"
-    },
-    {
-      "id": "cmqs319vw0qkcslp52gzwr77q",
-      "title": "OpenAI 与 Broadcom 联合发布 LLM 推理芯片 Jalapeño",
-      "title_en": "OpenAI and Broadcom unveil LLM-optimized inference chip",
-      "url": "https://openai.com/index/openai-broadcom-jalapeno-inference-chip",
-      "permalink": "https://aihot.virxact.com/items/cmqs319vw0qkcslp52gzwr77q",
-      "source": "OpenAI：官网动态（RSS · 排除企业/客户案例）",
-      "publishedAt": "2026-06-24T06:00:00.000Z",
-      "summary": "OpenAI 与 Broadcom 发布首款自研推理加速器 Jalapeño，专为当前及未来 LLM 从头设计。早期测试显示，其性能功耗比大幅优于现有 SOTA。工程样片已在实验室以目标频率和功耗运行 GPT-5.3-Codex-Spark 等负载。芯片从设计到流片仅用 9 个月，并利用 OpenAI 模型加速部分流程。OpenAI 计划从 2026 年起与 Microsoft 等合作伙伴部署千兆瓦级数据中心，推出多代计算平台。",
-      "category": "ai-products",
-      "score": 61,
-      "selected": true,
-      "designCategory": "产品与体验",
-      "relevanceScore": 6,
-      "editorialScore": 10,
-      "tags": [
-        "设计",
-        "codex"
       ],
       "whyItMatters": "与产品体验、交互判断和界面设计相关"
     },
